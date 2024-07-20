@@ -50,7 +50,7 @@ func main() {
 	router.HandleFunc("/tasks/{id}", deleteTask).Methods("DELETE")
 
 	c := cors.New(cors.Options{
-		AllowedOrigins:   []string{"http://localhost:5173"},
+		AllowedOrigins:   []string{"http://taskmanager-frontend.s3-website.us-east-2.amazonaws.com/", "http://localhost:5173"},
 		AllowedMethods:   []string{"GET", "POST", "DELETE"},
 		AllowedHeaders:   []string{"Content-Type"},
 		AllowCredentials: true,
